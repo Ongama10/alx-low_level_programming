@@ -1,15 +1,2 @@
 #!/bin/bash
-
-# Check if a filename was provided
-if [ -z "$1" ]; then
-    echo "Usage: $0 <filename>"
-    exit 1
-fi
-
-# Extract filename and extension
-filename=$(basename "$1")
-extension="${filename##*.}"
-filename="${filename%.*}"
-
-# Run the preprocessor and save the result
-cpp "$1" > "${filename}_processed.${extension}"
+gcc -E $CFILE -o c
