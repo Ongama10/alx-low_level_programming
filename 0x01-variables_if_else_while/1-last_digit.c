@@ -1,28 +1,24 @@
-#include <stdlib.h>
-#include <time.h>
-#include <stdio.h>
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
 
-/**
- * main - entry point
- *
- * Return:always return 0
- *
- */
-int main(void)
-{
-	int n;
+int main() {
+  int n;
+  srand(time(0));
+  n = rand();
+  
+  int last_digit = n % 10;
+  cout << "Last digit of " << n << " is ";
 
-	srand(time(0));
-	n = rand() - RAND_MAX / 2;
-	if (n < 0)
-	{
-		printf("%d is negative\n", n);
-	} else if (n == 0)
-	{
-		printf("%d is zero\n", n);
-	} else
-	{
-		printf("%d is positive\n", n);
-	}
-	return (0);
+  if (last_digit > 5) {
+    cout << last_digit << " and is greater than 5\n";
+  } else if (last_digit == 0) {
+    cout << "0\n";
+  } else {
+    cout << last_digit << " and is less than 6 and not 0\n";
+  }
+
+  return 0;
 }
+
