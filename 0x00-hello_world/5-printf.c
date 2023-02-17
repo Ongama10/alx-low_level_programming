@@ -1,9 +1,11 @@
 #include <stdio.h>
+/**
+ * main - A program that prints a line using the printf function
+ * Return: 0
+ */
 
-int main() {
-    printf("Behold, a magnificent piece of art,\n");
-    printf("With its colors so vivid and its shapes so smart.\n");
-    printf("It truly is a sight to behold,\n");
-    printf("And its beauty, I simply can't withhold.\n");
-    return 0;
+int main(void)
+{
+	printf("with proper grammar, but the outcome is a piece of art,\n")
+		return (0);
 }
