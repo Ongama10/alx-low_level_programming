@@ -2,10 +2,11 @@
 #include <stdlib.h>
 
 /**
- * main - returns alphabets both except q and e
+ * main - returns alphabets both except e and q
  *
  * Return: Always 0
  */
+
 int main(void)
 
 {
@@ -13,12 +14,12 @@ int main(void)
 
 	while (ch <= 'z')
 	{
-		if ((ch != 'q') && (ch != 'e'))
+		if ((ch != 'e') && (ch != 'q'))
 		{
 			putchar(ch);
 		}
 		ch++;
 	}
-	putchar('\n')
+	putchar('\n');
 	return (0);
 }
