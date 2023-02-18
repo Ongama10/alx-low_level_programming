@@ -1,24 +1,32 @@
-#include <iostream>
-#include <cstdlib>
-#include <ctime>
-using namespace std;
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+/**
+ * main - main function to generate a random number
+ *
+ * Return: Always 0
+ *
+ */
+int main(void)
+{
+	int n;
+	int num;
 
-int main() {
-  int n;
-  srand(time(0));
-  n = rand();
-  
-  int last_digit = n % 10;
-  cout << "Last digit of " << n << " is ";
-
-  if (last_digit > 5) {
-    cout << last_digit << " and is greater than 5\n";
-  } else if (last_digit == 0) {
-    cout << "0\n";
-  } else {
-    cout << last_digit << " and is less than 6 and not 0\n";
-  }
-
-  return 0;
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+	printf("Last digit of %d is ", n);
+	num = n % 10;
+	if (num > 5)
+	{
+		printf("%d and is greater than 5\n", num);
+	}
+	else if ((num < 6) && (num < 0))
+	{
+		printf("%d and is less than 6 and not 0\n", num);
+	}
+	else
+	{
+		printf("%d and is 0\n", num);
+	}
+	return (0);
 }
-
